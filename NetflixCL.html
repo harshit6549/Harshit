@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar for movie categories */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 flex justify-between p-4 z-50 bg-gradient-to-b from-black to-transparent">
+        <div class="flex items-center space-x-8">
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
+                alt="Netflix Logo" 
+                class="h-8"
+            />
+            <div class="space-x-4">
+                <a href="#" class="text-gray-300 hover:text-white">Home</a>
+                <a href="#" class="text-gray-300 hover:text-white">TV Shows</a>
+                <a href="#" class="text-gray-300 hover:text-white">Movies</a>
+                <a href="#" class="text-gray-300 hover:text-white">New & Popular</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="text-white">Search</button>
+            <button class="text-white">Notifications</button>
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+                alt="Profile" 
+                class="w-8 h-8 rounded-md"
+            />
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div 
+        class="relative h-screen bg-cover bg-center"
+        style="background-image: url('https://occ-0-1723-1722.1.nflxso.net/dnm/api/v6/6AYY37jfdO6dd7vdEjSK_VY0r2Q/AAAABSOLAiCqtqkbUmzNz0Mu8NPzZDXWYVPvRFCdU5AQ8iZA6A0NHGQkp-MvHUKlVo_mdIvfCvVsrxQIsRlTqoBrOvNjqPn9LXy7AMhE.jpg?r=f16')"
+    >
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center pl-16">
+            <div class="max-w-xl"><a href="https://www.youtube.com/watch?v=qSEeQXzFspk">
+                <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Stranger_Things_logo.png"
+                    alt="Stranger Things Logo" 
+                    class="max-h-32 mb-4"
+                    />
+                </a>
+            
+                <p class="text-lg mb-4 line-clamp-3">
+                    When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.
+                </p>
+                <div class="flex space-x-4">
+                    <button class="bg-white text-black px-6 py-2 rounded flex items-center hover:bg-opacity-80">
+                        ▶ Play
+                    </button>
+                    <button class="bg-gray-500 bg-opacity-70 text-white px-6 py-2 rounded flex items-center hover:bg-opacity-50">
+                        ℹ More Info
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Movie Categories -->
+    <div class="px-8 mt-[-100px] relative z-40">
+        <!-- Trending Now -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Trending Now</h2>
+            <div class="flex space-x-4 overflow-x-scroll scrollbar-hide">
+                <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                    <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg"
+                    alt="The Whitcher"
+                    class="rounded-md"
+                    />
+                </div>
+                <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                    <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/7/72/The_Great_Indian_Kapil_Show.jpg"
+                     alt="The Great The_Great_Indian_Kapil_Show"
+                     class="rounded-md"
+                     />
+                  </div>
+                <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                    <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/e/e2/Queen_of_Tears_poster.png"
+                        alt="Queen of tear" 
+                        class="rounded-md"
+                    />
+                </div>
+                <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                    <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Money_Heist-_The_Phenomenon_poster.jpg"
+                        alt="Money Heist" 
+                        class="rounded-md"
+                    />
+                </div>
+                <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                    <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/6/63/Godzilla_vs._Kong.png"
+                     alt="Godzilla vs.Kong"
+                     class="rounded-md"
+                     />
+                     </div>
+                     <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                        <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/6/63/Godzilla_vs._Kong.png"
+                         alt="Godzilla vs.Kong"
+                         class="rounded-md"
+                         />
+                         </div>
+                         <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                            <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/6/63/Godzilla_vs._Kong.png"
+                             alt="Godzilla vs.Kong"
+                             class="rounded-md"
+                             />
+                             </div>
+            </div>
+        </div>
+
+        <!-- Popular on Netflix -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Popular on Netflix</h2>
+            <div class="flex space-x-4 overflow-x-scroll scrollbar-hide">
+                <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                    <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/d/d9/Squid_Game_The_Challenge_poster.jpg"
+                        alt="Squid Game" 
+                        class="rounded-md"
+                    />
+                    
+                </div>
+                <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                    <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/0/0b/Black_Mirror_2017_cover_art.jpg"
+                        alt="Black Mirror" 
+                        class="rounded-md"
+                    />
+                </div>
+                <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                    <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Ozark-sharks-movie-poster-md.jpg"
+                        alt="Ozark" 
+                        class="rounded-md"
+                    />
+                </div>
+                <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                    <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/6/63/Godzilla_vs._Kong.png"
+                     alt="Godzilla vs.Kong"
+                     class="rounded-md"
+                     />
+                     </div>
+                         <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                            <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/6/63/Godzilla_vs._Kong.png"
+                             alt="Godzilla vs.Kong"
+                             class="rounded-md"
+                             />
+                             </div>
+                             <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                                <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/6/63/Godzilla_vs._Kong.png"
+                                 alt="Godzilla vs.Kong"
+                                 class="rounded-md"
+                                 />
+                                 </div>
+                                 <div class="min-w-[250px] cursor-pointer transform transition-all hover:scale-110 hover:z-50">
+                                    <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/en/6/63/Godzilla_vs._Kong.png"
+                                     alt="Godzilla vs.Kong"
+                                     class="rounded-md"
+                                     />
+                                     </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Simple hover effect for movies
+        const movieContainers = document.querySelectorAll('.min-w-[250px]');
+        movieContainers.forEach(container => {
+            container.addEventListener('mouseenter', () => {
+                container.classList.add('scale-110', 'z-50');
+            });
+            container.addEventListener('mouseleave', () => {
+                container.classList.remove('scale-110', 'z-50');
+            });
+        });
+    </script>
+</body>
+</html>
